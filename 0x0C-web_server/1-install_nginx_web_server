@@ -4,8 +4,7 @@
 # returns a page with string hello world
 sudo apt-get -y update
 sudo apt-get -y install nginx
-
-mkdir -p /var/www/html
+sudo chown -R "$USER":"$USER" /var/www/html
 sudo chmod -R 755 /var/www
 sudo ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html
