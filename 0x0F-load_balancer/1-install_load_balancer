@@ -11,8 +11,8 @@ frontend http_front
     
 backend web-servers
     balance roundrobin
-    server 16641-web-01 3.238.134.121:80
-    server 16641-web-02 3.239.84.157:80
+    server 16641-web-01 3.239.98.245:80
+    server 16641-web-02 34.239.177.244:80
 "
 # change ownership
 sudo chown -R "$USER":"$USER" /etc/haproxy
@@ -22,4 +22,4 @@ sudo add-apt-repository ppa:vbernat/haproxy-2.0
 sudo apt update
 sudo apt install -y haproxy
 sudo echo "$MyConfig" >> /etc/haproxy/haproxy.cfg
-service haproxy start
+sudo service haproxy start
