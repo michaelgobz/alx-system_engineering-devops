@@ -5,7 +5,7 @@ apt-get -y install nginx
 
 #The the firewall config
 sudo ufw allow 'Nginx HTTP'
-sudo ufw enable
+#sudo ufw enable
 
 # Give the user ownership to website files for easy editing
 sudo chown -R "$USER":"$USER" /var/www/html
