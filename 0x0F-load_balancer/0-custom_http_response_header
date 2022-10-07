@@ -2,7 +2,15 @@
 # Configures a new Ubuntu server with a custom HTTP header response
 apt-get -y update
 apt-get -y install nginx
-ufw allow 'Nginx HTTP'
-echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+
+#The the firewall config
+sudo ufw allow 'Nginx HTTP'
+sudo ufw enable
+
+# Give the user ownership to website files for easy editing
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
+# add the custom header
+sudo echo 'Hello World!' > /var/www/html/index.nginx-debian.html
 sed -i '/listen 80 default_server;/a add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
 service nginx start
