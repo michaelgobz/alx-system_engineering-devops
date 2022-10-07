@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# installs and configs nginx on the servers
 sudo apt-get -y  update
 sudo apt-get -y install nginx
 
@@ -17,7 +17,7 @@ echo "Backup default index"
 cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.bckp
 
 echo "Creating new index"
-echo -e "Hello World!" >> /var/www/html/index.nginx-debian.html
+echo  "Hello World!" >> /var/www/html/index.nginx-debian.html
 
 echo "Restarting nginx"
 sudo service nginx restart
