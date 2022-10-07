@@ -8,7 +8,6 @@ sudo service nginx start
 
 echo "allowing nginx on firewall"
 sudo ufw allow 'Nginx HTTP'
-sudo ufw enable
 
 echo "Give the user ownership to website files for easy editing"
 sudo chown -R "$USER":"$USER" /var/www/html
