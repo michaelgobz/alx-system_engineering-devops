@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 # Configures a new Ubuntu server with a HAproxy load-balancer
 # firewall config
 sudo ufw allow 1344
