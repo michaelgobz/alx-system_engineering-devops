@@ -11,8 +11,8 @@ frontend http_front
     
 backend web-servers
     balance roundrobin
-    server 16641-web-01 44.200.188.37:80
-    server 16641-web-02 3.94.99.26:80
+    server 16641-web-01 3.238.134.121:80
+    server 16641-web-02 3.239.84.157:80
 "
 # change ownership
 sudo chown -R "$USER":"$USER" /etc/haproxy
