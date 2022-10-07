@@ -10,8 +10,8 @@ green='\e[1;32m'
 reset='\033[0m'
 
 echo -e "${blue}Updating and installing ${brown}Nginx${blue}.${reset}\n"
-sudo apt-get update -y -qq && \
-	 sudo apt-get install nginx -y
+sudo apt-get -y  update 
+sudo apt-get -y install nginx 
 
 echo -e "\n${blue}Setting up some minor stuff.${reset}\n"
 
