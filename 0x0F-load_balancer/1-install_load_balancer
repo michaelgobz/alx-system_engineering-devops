@@ -2,7 +2,7 @@
 # Configures a new Ubuntu server with a HAproxy load-balancer
 # firewall config
 sudo ufw allow 1344
-sudo ufw enable
+# coniguration string
 MyConfig="\
 frontend http_front
     bind *:80
@@ -14,12 +14,12 @@ backend web-servers
     server 16641-web-01 3.239.98.245:80
     server 16641-web-02 34.239.177.244:80
 "
+# install haproxy
+sudo apt update
+sudo apt -y install haproxy
 # change ownership
 sudo chown -R "$USER":"$USER" /etc/haproxy
 sudo chmod -R 755 /etc/haproxy
-
-sudo add-apt-repository ppa:vbernat/haproxy-2.0
-sudo apt update
-sudo apt install -y haproxy
+# update the configs and start 
 sudo echo "$MyConfig" >> /etc/haproxy/haproxy.cfg
 sudo service haproxy start
