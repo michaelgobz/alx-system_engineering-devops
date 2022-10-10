@@ -5,12 +5,8 @@ sudo apt-get -y install nginx
 
 #The the firewall config
 sudo ufw allow 'Nginx HTTP'
-#sudo ufw enable
 
-# Give the user ownership to website files for easy editing
-sudo chown -R "$USER":"$USER" /var/www/html
-sudo chmod -R 755 /var/www
 # add the custom header
 sudo echo 'Hello World!' > /var/www/html/index.nginx-debian.html
-sudo sed -i '/=404;/a \                add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
-sudo service nginx start
+sudo sed -i '/=404;/a \                add_header X-Served-By $hostname;' /etc/nginx/sites-enabled/default
+sudo service nginx restart
