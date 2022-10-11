@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+# installs MySQL on servers
+# signature key checking
+sudo apt-key add signature.key
+# add the repo to the  apt source list
+sudo sh -c 'echo "deb http://repo.mysql.com/apt/ubuntu bionic mysql-5.7" >> /etc/apt/sources.list.d/mysql.list'
+# update the sources
+sudo apt-get update
+#check for the available verisons
+sudo apt-cache policy mysql-server
+#install version 5.7
+sudo apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
+
+
+
