@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+#use mysql_dump  to create archive files for backup
+
