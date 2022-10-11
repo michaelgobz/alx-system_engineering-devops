@@ -1,7 +1,8 @@
 #!usr/bin/env bash
 #This Script configures the firewall to open SSL , HTTPS and HTTP 
 
+sudo apt update 
+sudo apt  -y install ufw
 sudo ufw allow 22/tcp comment 'Open port ssh tcp port 22'
 sudo ufw allow 443/tcp comment 'Open HTTPS/SSL on port 443'
 sudo ufw allow 80/tcp comment 'open HTTP on port 80'
-
