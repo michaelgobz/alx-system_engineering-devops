@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+sudo ufw allow from sudo ufw allow from replica_server_ip to any port 3306 to any port 3306
