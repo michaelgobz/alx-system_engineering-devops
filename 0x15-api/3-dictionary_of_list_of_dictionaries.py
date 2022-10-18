@@ -30,4 +30,3 @@ if __name__ == "__main__":
     content = json.dumps(content)
     with open(filename, 'w') as jsonfile:
         jsonfile.write(content)
-

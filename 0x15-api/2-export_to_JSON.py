@@ -24,4 +24,3 @@ if __name__ == "__main__":
     content = json.dumps(content)
     with open(filename, 'w', newline='') as jsonfile:
         jsonfile.write(content)
-

@@ -23,4 +23,3 @@ if __name__ == "__main__":
           response.get("name"), len(complete_tasks), len(todo)))
     for title in complete_tasks:
         print("\t {}".format(title))
-

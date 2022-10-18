@@ -20,4 +20,3 @@ if __name__ == "__main__":
         for task in todo:
             write_file.writerow([int(argv[1]), response.get("username"),
                                 task.get("completed"), task.get("title")])
-
