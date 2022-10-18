@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 extend your Python script to export data in the JSON format
+This forms a dictioanry of dictionaries
 """
 import json
 import requests
